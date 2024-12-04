@@ -1,7 +1,0 @@
-Station Name,Measurement Timestamp,Air Temperature,Wet Bulb Temperature,Humidity,Rain Intensity,Interval Rain,Total Rain,Precipitation Type,Wind Direction,Wind Speed,Maximum Wind Speed,Barometric Pressure,Solar Radiation,Heading,Battery Life,Measurement Timestamp Label,Measurement ID
-63rd Street Weather Station,09/27/2018 10:00:00 AM,16.4,12.2,61,0,0,260.3,0,231,2.5,4.7,996.3,484,356,11.9,09/27/2018 10:00 AM,63rdStreetWeatherStation201809271000
-63rd Street Weather Station,09/27/2018 11:00:00 AM,17.1,11.5,51,0,0,260.3,0,244,3.6,5.7,995.4,468,356,11.9,09/27/2018 11:00 AM,63rdStreetWeatherStation201809271100
-Foster Weather Station,09/27/2018 01:00:00 PM,17.89,0,39,0,0,0,0,249,1.4,2.3,993.6,0,0,15.1,09/27/2018 1:00 PM,FosterWeatherStation201809271300
-Foster Weather Station,09/27/2018 03:00:00 PM,19.39,0,37,0,0,0,0,209,4,4.6,991.9,0,0,15,09/27/2018 3:00 PM,FosterWeatherStation201809271500
-Oak Street Weather Station,06-01-2020 00:00,16.2,11,53,0,0,13.4,0,115,0.9,1.1,1003.6,0,357,12,06-01-2020 00:00,OakStreetWeatherStation202006012400
-Oak Street Weather Station,06-01-2020 02:00,16.4,10,44,0,0,13.4,0,72,1,2.4,1003.8,0,357,12,06-01-2020 02:00,OakStreetWeatherStation202006010200

@@ -5,7 +5,7 @@ from data_preprocessing import transform_data
 from data_analysis import aggregate_data_by_station, add_metadata_to_grouped_aggregated_data
 import time
 import pandas as pd
-from db_connection import connect_to_postgresql
+from db_connection import send_data_postgresql
 from logger import create_logger
 
 logger = create_logger()
@@ -21,9 +21,15 @@ def process_file(file_path):
     # Read the CSV file
     data = read_csv_to_df(file_path)
     
-    # Call validate_data function from data_validation_check.py
-    valid_records = validate_data(data)
-    
+    try:
+        # Call validate_data function from data_validation_check.py
+        valid_records = validate_data(data)
+        logger.info
+        
+    except Exception as error:
+        print(f"Error while validating data: {error}")
+        logger.error(f"Error while validating data: {error}")
+           
     if not(valid_records.empty):
         logger.info("Valid records found.")
         processed_records = transform_data(valid_records)
@@ -41,7 +47,7 @@ def process_file(file_path):
         
         try:
             logger.info("Connected to postgresql")
-            connect_to_postgresql(processed_records, grouped_data_with_metadata)
+            send_data_postgresql(processed_records, grouped_data_with_metadata)
             
         except Exception as error:
             print(f"Error while sending data to db: {error}")

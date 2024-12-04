@@ -1,7 +1,7 @@
 import logging
 import os
 
-# Directory for log files
+# Directory for log files (relative path)
 LOG_DIR = "logs"
 os.makedirs(LOG_DIR, exist_ok=True)  # Ensure the directory exists
 
@@ -25,14 +25,14 @@ def create_logger(name="SeaBreezeLogger"):
         info_log_file = os.path.join(LOG_DIR, "info.log")
         info_handler = logging.FileHandler(info_log_file)
         info_handler.setLevel(logging.DEBUG)  # Log DEBUG, INFO, and above
-        info_format = logging.Formatter('%(asctime)s - %(levelname)s - %(filename)s  - %(message)s')
+        info_format = logging.Formatter('%(asctime)s - %(levelname)s - %(filename)s - %(message)s')
         info_handler.setFormatter(info_format)
 
         # File for ERROR and CRITICAL logs
         error_log_file = os.path.join(LOG_DIR, "error.log")
         error_handler = logging.FileHandler(error_log_file)
         error_handler.setLevel(logging.ERROR)  # Log ERROR and CRITICAL levels only
-        error_format = logging.Formatter('%(asctime)s - %(levelname)s - %(filename)s  - %(message)s')
+        error_format = logging.Formatter('%(asctime)s - %(levelname)s - %(filename)s - %(message)s')
         error_handler.setFormatter(error_format)
 
         # Add both handlers to the logger

@@ -1,54 +1,33 @@
 import numpy as np
 import pandas as pd
+from logger import create_logger
+
+# Create logger instance
+logger = create_logger()
 
 def transform_data(data):
-    
-    # Methods to check for missing values, data types, value ranges and timestamps
+    logger.info("Starting data transformation process.")
     data = check_duplicates(data)
-    # fill_missing_values(data)
     data = split_timestamp(data, 'Measurement Timestamp')
-    
+    logger.info("Data transformation process completed.")
     return data
 
 def check_duplicates(data):
-    """
-    Checks for and removes duplicate rows in a DataFrame.
-    
-    Args:
-        data (pd.DataFrame): The input DataFrame.
-    
-    Returns:
-        pd.DataFrame: A DataFrame with duplicates removed.
-    """
-    # Check for duplicates in the data
+    logger.info("Checking for duplicate rows.")
     duplicate_rows = data.duplicated()
-    
-    # Remove duplicates
     data = data[~duplicate_rows]
-    
+    logger.info(f"Removed {duplicate_rows.sum()} duplicate rows.")
     return data
 
 def split_timestamp(data, timestamp_column):
-    """
-    Splits a timestamp column into separate date, time, and day_name columns.
-    
-    Args:
-        data (pd.DataFrame): The input DataFrame.
-        timestamp_column (str): The name of the timestamp column in the DataFrame.
-    
-    Returns:
-        pd.DataFrame: A DataFrame with added 'date', 'time', and 'day_name' columns.
-    """
-
-    # Convert the timestamp column to datetime if not already
+    logger.info(f"Splitting timestamp column: {timestamp_column}")
     data[timestamp_column] = pd.to_datetime(data[timestamp_column])
-        
-    # Extract date, time, and day name
     data['date'] = data[timestamp_column].dt.date
     data['time'] = data[timestamp_column].dt.time
     data['day_name'] = data[timestamp_column].dt.day_name()
-        
+    logger.info(f"Timestamp column {timestamp_column} split into date, time, and day_name.")
     return data
+
 
 # def fill_missing_values(data):
 #     """

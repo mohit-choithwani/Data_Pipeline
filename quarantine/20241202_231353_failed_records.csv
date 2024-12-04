@@ -1,2 +1,0 @@
-Station Name,Measurement Timestamp,Air Temperature,Wet Bulb Temperature,Humidity,Rain Intensity,Interval Rain,Total Rain,Precipitation Type,Wind Direction,Wind Speed,Maximum Wind Speed,Barometric Pressure,Solar Radiation,Heading,Battery Life,Measurement Timestamp Label,Measurement ID,error_message
-63rd Street Weather Station,09/27/2018 10:00:00 AM,ABC,12.2,61,0,0,260.3,0,231,2.5,4.7,996.3,484,356,11.9,09/27/2018 10:00 AM,63rdStreetWeatherStation201809271000,"Temperature must be numeric, found: <class 'str'>."
