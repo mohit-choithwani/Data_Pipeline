@@ -1,0 +1,57 @@
+Station Name,Measurement Timestamp,Air Temperature,Wet Bulb Temperature,Humidity,Rain Intensity,Interval Rain,Total Rain,Precipitation Type,Wind Direction,Wind Speed,Maximum Wind Speed,Barometric Pressure,Solar Radiation,Heading,Battery Life,Measurement Timestamp Label,Measurement ID
+Foster Weather Station,09/22/2015 11:00:00 AM,18.89,,64,,0,,,119,2.8,3.5,1000,588,,15.1,09/22/2015 11:00 AM,FosterWeatherStation201509221100
+Foster Weather Station,09/22/2015 01:00:00 PM,19.67,,68,,0,,,132,1.8,2.1,999.7,658,,15.1,09/22/2015 1:00 PM,FosterWeatherStation201509221300
+Foster Weather Station,09/22/2015 03:00:00 PM,20.56,,64,,0,,,113,1.3,2.1,999,502,,15.1,09/22/2015 3:00 PM,FosterWeatherStation201509221500
+Foster Weather Station,09/22/2015 04:00:00 PM,20.56,,61,,0,,,116,2.1,2.7,999,287,,15.1,09/22/2015 4:00 PM,FosterWeatherStation201509221600
+Foster Weather Station,09/22/2015 05:00:00 PM,20.56,,64,,0,,,60,1.2,1.3,999,168,,15.1,09/22/2015 5:00 PM,FosterWeatherStation201509221700
+Foster Weather Station,09/22/2015 06:00:00 PM,20,,68,,0,,,128,1.6,2.1,999,122,,15.1,09/22/2015 6:00 PM,FosterWeatherStation201509221800
+Foster Weather Station,09/22/2015 07:00:00 PM,19.5,,71,,0,,,152,1.3,1.5,999.3,1,,15.1,09/22/2015 7:00 PM,FosterWeatherStation201509221900
+Foster Weather Station,09/22/2015 08:00:00 PM,19.39,,69,,0,,,168,0.5,0.7,1000,0,,15.1,09/22/2015 8:00 PM,FosterWeatherStation201509222000
+Foster Weather Station,09/22/2015 09:00:00 PM,19.06,,72,,0,,,178,1.2,1.3,1000,1,,15.1,09/22/2015 9:00 PM,FosterWeatherStation201509222100
+Foster Weather Station,09/22/2015 10:00:00 PM,19.06,,74,,0,,,99,0.3,0.8,1000.3,0,,15.1,09/22/2015 10:00 PM,FosterWeatherStation201509222200
+Foster Weather Station,09/22/2015 12:00:00 AM,17.17,,84,,0,,,141,1.5,1.7,997.3,0,,15.1,09/22/2015 12:00 AM,FosterWeatherStation201509222400
+Foster Weather Station,09/23/2015 01:00:00 AM,18.5,,72,,0,,,146,0.6,0.8,1000.7,0,,15.1,09/23/2015 1:00 AM,FosterWeatherStation201509230100
+Foster Weather Station,09/23/2015 02:00:00 AM,18.28,,74,,0,,,146,1,1.2,1000.3,0,,15.1,09/23/2015 2:00 AM,FosterWeatherStation201509230200
+Foster Weather Station,09/23/2015 03:00:00 AM,18.06,,74,,0,,,188,0.8,0.9,1000,0,,15.1,09/23/2015 3:00 AM,FosterWeatherStation201509230300
+Foster Weather Station,09/23/2015 04:00:00 AM,17.56,,74,,0,,,47,0.2,0.3,1000,0,,15.1,09/23/2015 4:00 AM,FosterWeatherStation201509230400
+Foster Weather Station,09/23/2015 05:00:00 AM,17.56,,78,,0,,,180,0.8,0.9,1000.7,1,,15.1,09/23/2015 5:00 AM,FosterWeatherStation201509230500
+Foster Weather Station,09/23/2015 06:00:00 AM,17.56,,70,,0,,,276,0.8,0.9,1001.7,0,,15.1,09/23/2015 6:00 AM,FosterWeatherStation201509230600
+Foster Weather Station,09/23/2015 07:00:00 AM,16.06,,85,,0,,,348,1.3,1.4,1002.4,30,,15.1,09/23/2015 7:00 AM,FosterWeatherStation201509230700
+Foster Weather Station,09/23/2015 08:00:00 AM,18.56,,71,,0,,,72,0.4,0.6,1002.4,173,,15.1,09/23/2015 8:00 AM,FosterWeatherStation201509230800
+Foster Weather Station,09/23/2015 09:00:00 AM,18.39,,73,,0,,,68,0.7,0.8,1002.4,335,,15.1,09/23/2015 9:00 AM,FosterWeatherStation201509230900
+63rd Street Weather Station,09/29/2018 11:00:00 PM,14.7,11.9,73,0,0,265.2,0,90,4.5,8.5,1001.8,2,355,11.9,09/29/2018 11:00 PM,63rdStreetWeatherStation201809292300
+Foster Weather Station,09/29/2018 11:00:00 PM,13.39,,69,,0.1,,,72,3.8,4.1,1001.7,0,,15.1,09/29/2018 11:00 PM,FosterWeatherStation201809292300
+63rd Street Weather Station,09/30/2018 07:00:00 AM,14.5,11.9,74,0,0,265.4,0,138,0.7,1.5,1000.2,7,355,11.8,09/30/2018 7:00 AM,63rdStreetWeatherStation201809300700
+Foster Weather Station,09/30/2018 07:00:00 AM,13,,77,,0,,,108,1.1,1.3,1000,0,,15.1,09/30/2018 7:00 AM,FosterWeatherStation201809300700
+63rd Street Weather Station,08-01-2019 17:00,22.4,19.4,76,0,0,406.7,0,32,5.3,7.1,999.5,453,355,11.9,08-01-2019 17:00,63rdStreetWeatherStation201908011700
+Foster Weather Station,08-01-2019 17:00,22.28,,70,,0,,,57,1.7,2.3,999.3,0,,15.1,08-01-2019 17:00,FosterWeatherStation201908011700
+Oak Street Weather Station,08-01-2019 17:00,22.9,19.4,72,0,0,153.5,0,75,3.3,4.1,1000.7,34,320,12,08-01-2019 17:00,OakStreetWeatherStation201908011700
+63rd Street Weather Station,08-01-2019 18:00,22.8,19.6,74,0,0,406.7,0,22,3.8,6.7,999.2,293,354,11.9,08-01-2019 18:00,63rdStreetWeatherStation201908011800
+Foster Weather Station,08-01-2019 18:00,22.67,,64,,0,,,27,2.4,2.9,998.6,0,,15.1,08-01-2019 18:00,FosterWeatherStation201908011800
+Oak Street Weather Station,08-01-2019 18:00,22.6,19.1,72,0,0,153.5,0,70,3.1,4,1000.2,27,320,12,08-01-2019 18:00,OakStreetWeatherStation201908011800
+63rd Street Weather Station,08-01-2019 19:00,22.6,19.5,76,0,0,406.7,0,25,4.4,6.1,999,136,355,11.9,08-01-2019 19:00,63rdStreetWeatherStation201908011900
+Foster Weather Station,08-01-2019 19:00,22.5,,67,,0,,,356,1.1,1.3,998.6,0,,15.1,08-01-2019 19:00,FosterWeatherStation201908011900
+Oak Street Weather Station,08-01-2019 19:00,23.1,19.3,70,0,0,153.5,0,71,2.6,3.4,1000,143,320,12,08-01-2019 19:00,OakStreetWeatherStation201908011900
+63rd Street Weather Station,08-01-2019 20:00,22.3,19.4,76,0,0,406.7,0,42,2.2,5.1,999.1,8,356,11.9,08-01-2019 20:00,63rdStreetWeatherStation201908012000
+Foster Weather Station,08-01-2019 20:00,21.67,,66,,0,,,14,2.7,3.2,998.6,0,,15.1,08-01-2019 20:00,FosterWeatherStation201908012000
+Oak Street Weather Station,08-01-2019 20:00,22.6,18.7,70,0,0,153.5,0,86,2.2,2.7,1000,3,320,12,08-01-2019 20:00,OakStreetWeatherStation201908012000
+63rd Street Weather Station,08-01-2019 21:00,22.2,18.9,73,0,0,406.7,0,45,1.9,4.6,999.4,0,356,11.9,08-01-2019 21:00,63rdStreetWeatherStation201908012100
+Foster Weather Station,08-01-2019 21:00,21.5,,63,,0,,,55,2,2.5,998.6,0,,15.1,08-01-2019 21:00,FosterWeatherStation201908012100
+Oak Street Weather Station,08-01-2019 21:00,22.4,18.2,67,0,0,153.5,0,93,2.6,3.2,1000.1,-4,320,12,08-01-2019 21:00,OakStreetWeatherStation201908012100
+63rd Street Weather Station,08-01-2019 22:00,22.2,18.9,73,0,0,406.7,0,64,1.8,3.2,999.7,0,356,11.9,08-01-2019 22:00,63rdStreetWeatherStation201908012200
+Foster Weather Station,08-01-2019 22:00,21.39,,63,,0,,,53,1.3,1.5,999.3,0,,15.1,08-01-2019 22:00,FosterWeatherStation201908012200
+Oak Street Weather Station,08-01-2019 22:00,22.5,17.8,63,0,0,153.5,0,97,2.5,2.8,1000.5,-4,320,12.1,08-01-2019 22:00,OakStreetWeatherStation201908012200
+63rd Street Weather Station,08-01-2019 23:00,22.2,19,74,0,0,406.7,0,65,2.2,3.8,999.7,0,356,11.8,08-01-2019 23:00,63rdStreetWeatherStation201908012300
+Foster Weather Station,08-01-2019 23:00,21.39,,62,,0,,,70,1.9,2.6,999.3,0,,15.1,08-01-2019 23:00,FosterWeatherStation201908012300
+Oak Street Weather Station,08-01-2019 23:00,22.3,17.7,64,0,0,153.5,0,107,2.4,2.8,1000.5,-4,320,12,08-01-2019 23:00,OakStreetWeatherStation201908012300
+63rd Street Weather Station,08-02-2019 00:00,22.3,19.1,74,0,0,406.7,0,77,3.9,5,999.7,0,356,11.9,08-02-2019 00:00,63rdStreetWeatherStation201908022400
+Foster Weather Station,08-02-2019 00:00,21.39,,65,,0,,,85,1.6,1.8,999,0,,15.1,08-02-2019 00:00,FosterWeatherStation201908022400
+Oak Street Weather Station,08-02-2019 00:00,22.2,18.2,68,0,0,153.5,0,115,1.8,2.2,1000.4,-4,320,12,08-02-2019 00:00,OakStreetWeatherStation201908022400
+63rd Street Weather Station,08-02-2019 01:00,21.8,19.4,80,0,0,406.7,0,104,1.8,3.6,999.7,0,356,11.9,08-02-2019 01:00,63rdStreetWeatherStation201908020100
+Foster Weather Station,08-02-2019 01:00,21.28,,68,,0,,,79,1.5,1.7,999.3,0,,15.1,08-02-2019 01:00,FosterWeatherStation201908020100
+Oak Street Weather Station,08-02-2019 01:00,22.4,18.5,70,0,0,153.5,0,145,0.7,1.8,1000.6,-4,320,12,08-02-2019 01:00,OakStreetWeatherStation201908020100
+63rd Street Weather Station,08-02-2019 02:00,21.4,19.6,84,0,0,406.7,0,102,1.1,2.7,999.7,0,356,11.9,08-02-2019 02:00,63rdStreetWeatherStation201908020200
+Foster Weather Station,08-02-2019 02:00,21,,75,,0,,,82,1.2,1.4,999.3,0,,15.1,08-02-2019 02:00,FosterWeatherStation201908020200
+Oak Street Weather Station,08-02-2019 02:00,22,18.8,74,0,0,153.5,0,139,0.6,1.1,1000.6,-4,320,12,08-02-2019 02:00,OakStreetWeatherStation201908020200
+63rd Street Weather Station,08-02-2019 03:00,21.9,18.9,76,0,0,406.7,0,79,2.7,3.3,999.5,0,356,11.9,08-02-2019 03:00,63rdStreetWeatherStation201908020300
+63rd Street Weather Station,09/30/2018 08:00:00 AM,15.5,12.9,75,0,0,265.4,0,161,0.7,1.7,1000.2,113,355,11.9,09/30/2018 8:00 AM,63rdStreetWeatherStation201809300800
