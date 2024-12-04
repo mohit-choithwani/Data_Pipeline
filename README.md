@@ -2,6 +2,8 @@
 
 In this project, I try to implement real-time data pipelines and associated operations in an efficient manner. It integrates data validation, preprocessing, aggregation, and analysis with logging mechanisms and more.
 
+![Architecture Design](/assests/datapipelinearchi.png)
+
 ## Table of Contents
 
 - [Installation](#installation)
