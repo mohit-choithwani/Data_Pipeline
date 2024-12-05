@@ -1,0 +1,58 @@
+2024-12-05 03:13:31,087 - ERROR - db_connection.py - Failed to connect to the database. Error: connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+2024-12-05 03:13:31,087 - ERROR - db_connection.py - Error creating tables and indexes: 'NoneType' object has no attribute 'execute'
+2024-12-05 03:13:31,087 - ERROR - db_connection.py - Error inserting row: Station Name                            63rd Street Weather Station
+Measurement Timestamp                           2018-09-27 10:00:00
+Air Temperature                                                16.4
+Wet Bulb Temperature                                           12.2
+Humidity                                                         61
+Rain Intensity                                                    0
+Interval Rain                                                     0
+Total Rain                                                    260.3
+Precipitation Type                                                0
+Wind Direction                                                  231
+Wind Speed                                                      2.5
+Maximum Wind Speed                                              4.7
+Barometric Pressure                                           996.3
+Solar Radiation                                                 484
+Heading                                                         356
+Battery Life                                                   11.9
+Measurement Timestamp Label                     09/27/2018 10:00 AM
+Measurement ID                 63rdStreetWeatherStation201809271000
+date                                                     2018-09-27
+time                                                       10:00:00
+day_name                                                   Thursday
+Name: 0, dtype: object. Error: 'NoneType' object has no attribute 'execute'
+2024-12-05 03:13:31,087 - ERROR - db_connection.py - Fatal error in main workflow: 'NoneType' object has no attribute 'commit'
+2024-12-05 03:22:14,894 - ERROR - db_connection.py - Failed to connect to the database. Error: connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+2024-12-05 03:22:14,989 - ERROR - db_connection.py - Error creating tables and indexes: 'NoneType' object has no attribute 'execute'
+2024-12-05 03:22:14,994 - ERROR - db_connection.py - Error inserting row: Station Name                            63rd Street Weather Station
+Measurement Timestamp                           2018-09-27 10:00:00
+Air Temperature                                                16.4
+Wet Bulb Temperature                                           12.2
+Humidity                                                         61
+Rain Intensity                                                    0
+Interval Rain                                                     0
+Total Rain                                                    260.3
+Precipitation Type                                                0
+Wind Direction                                                  231
+Wind Speed                                                      2.5
+Maximum Wind Speed                                              4.7
+Barometric Pressure                                           996.3
+Solar Radiation                                                 484
+Heading                                                         356
+Battery Life                                                   11.9
+Measurement Timestamp Label                     09/27/2018 10:00 AM
+Measurement ID                 63rdStreetWeatherStation201809271000
+date                                                     2018-09-27
+time                                                       10:00:00
+day_name                                                   Thursday
+Name: 0, dtype: object. Error: 'NoneType' object has no attribute 'execute'
+2024-12-05 03:22:14,994 - ERROR - db_connection.py - Fatal error in main workflow: 'NoneType' object has no attribute 'commit'

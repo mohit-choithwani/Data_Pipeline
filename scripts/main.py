@@ -7,6 +7,7 @@ import time
 import pandas as pd
 from db_connection import send_data_postgresql
 from logger import create_logger
+import os
 
 logger = create_logger()
 
@@ -62,7 +63,9 @@ def read_csv_to_df(file_path):
         logger.error(f"ParserError: {e}")
 
 if __name__ == "__main__":
-    path = ".\data"
+    script_dir = os.path.dirname(os.path.abspath(__file__))  # Get the directory of main.py
+    project_root = os.path.dirname(script_dir)  # Navigate one level up to "SeaBreeze_Analytics_Data_Pipeline"
+    path = os.path.join(project_root, "data")  # Create the full path to "data"
     observer = Observer()
     observer.schedule(FileHandler(), path=path, recursive=False)
     observer.start()
