@@ -18,7 +18,7 @@ To set up and install the project locally, follow these steps:
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/mohit-choithwani/Data_Pipeline.git
+   git clone https://github.com/mohit-choithwani/SeaBreeze_Analytics_Data_Pipeline.git
    cd SeaBreeze_Analytics_Data_Pipeline
    ```
 
