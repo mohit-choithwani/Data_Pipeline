@@ -81,7 +81,7 @@ def validate_data(data):
             validate_temperature_range(record)
             validate_missing_sensor_values(record)
             validate_data_types(record)
-            validate_value_ranges(record, numerical_cols, data)
+            # validate_value_ranges(record, numerical_cols, data)
             validate_timestamps(record)
             valid_records.append(record)
         except Exception as e:

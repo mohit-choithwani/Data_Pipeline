@@ -42,9 +42,18 @@ To set up and install the project locally, follow these steps:
 
 The dataset used in this project is the **Beach Weather Dataset** from Kaggle. You can access the dataset through the following [link](https://www.kaggle.com/code/sanjanchaudhari/beach-weather-stations-analysis?select=Beach_Weather_Stations_-_Automated_Sensors.csv). This dataset consists of weather measurements collected from beach weather stations, including parameters like air temperature, humidity, wind speed, and precipitation. 
 
+## Database Setup
+
+To store the processed data and aggregated data, a PostgreSQL database is used. You can set up a PostgreSQL database locally or use a cloud-based service like Amazon RDS or Google Cloud SQL. I have set up a PostgreSQL database using Docker for local development. You can follow the steps from this [blog](https://docs.chaicode.com/postgresql-installation/) to set up a PostgreSQL database using Docker. 
+
+Once you have set up the database, you can update the database connection details in the `db_connection.py` file.
+
 ## Usage
 
 After executing the script/main.py file, the program will continuously monitor the data folder for any new .csv files. When a .csv file is detected, the program will automatically read the data and perform a series of operations, including data validation, transformation, and analysis. The processed data and the aggregated data will then be uploaded to a PostgreSQL database. All logs related to the process will be stored in the logs folder.
+
+To test the pipeline, add a new .csv file to the data folder (you can create a new csv or subset the existing data stored in the data folder). If the data passes all the validation checks then the data is stored to a PostgreSQL database. The details about the validation checks and processing operations are documented under the docs folder. You can also modify the data_validation_check.py, data_preprocessing.py, and data_analysis.py files to customize the data processing steps according to your requirements.
+
 
 ## Future Work
 
