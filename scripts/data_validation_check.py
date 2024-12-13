@@ -27,10 +27,11 @@ def validate_missing_sensor_values(record):
         logger.error(f"Missing sensor values in columns {missing_cols} for record: {record}")
         raise ValueError(f"Missing values in the following columns: {', '.join(missing_cols)}")
 
-def validate_data_types(record):
-    if pd.notnull(record['Air Temperature']) and not isinstance(record['Air Temperature'], (int, float)):
-        logger.error(f"Temperature data type invalid: {type(record['Air Temperature'])} for record: {record}")
-        raise TypeError(f"Temperature must be numeric, found: {type(record['Air Temperature'])}.")
+def validate_data_types(record, numerical_columns):
+    for column in numerical_columns:
+        if pd.notnull(record[column]) and not isinstance(record[column], (int, float)):
+            logger.error(f"Invalid data type in column '{column}': {type(record[column])} for record: {record}")
+            raise TypeError(f"Column '{column}' must be numeric, found: {type(record[column])}.")
 
 def validate_value_ranges(record, numerical_cols, data):
     for col in numerical_cols:
@@ -80,7 +81,7 @@ def validate_data(data):
             validate_missing_values(record)
             validate_temperature_range(record)
             validate_missing_sensor_values(record)
-            validate_data_types(record)
+            validate_data_types(record, numerical_cols)
             # validate_value_ranges(record, numerical_cols, data)
             validate_timestamps(record)
             valid_records.append(record)

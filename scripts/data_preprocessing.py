@@ -28,7 +28,6 @@ def split_timestamp(data, timestamp_column):
     logger.info(f"Timestamp column {timestamp_column} split into date, time, and day_name.")
     return data
 
-
 # def fill_missing_values(data):
 #     """
 #     Fills missing values in a DataFrame with the mean of the column.

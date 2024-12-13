@@ -37,6 +37,3 @@ def add_metadata_to_grouped_aggregated_data(grouped_aggregated_data, file_name):
     grouped_aggregated_data['file_name'] = file_name  
 
     return grouped_aggregated_data
-
-def test():
-    print("worked")

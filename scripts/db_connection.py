@@ -10,6 +10,23 @@ os.makedirs(LOG_DIR, exist_ok=True)
 
 logger = create_logger()
 
+def connect_to_postgresql():
+    try:
+        conn = psycopg2.connect(
+                dbname='SeaBreeze',
+                user='SeaBreeze',
+                password='SeaBreeze',
+                host='localhost',
+                port=5432
+            )
+        cursor = conn.cursor()
+        logger.info("Connected to PostgreSQL database.")
+        return conn, cursor
+    
+    except Exception as error:
+        logger.error(f"Failed to connect to the database. Error: {error}")
+        return None, None
+
 def create_tables_and_indexes(cursor):
     """
     Creates tables and indexes in the database.
@@ -22,8 +39,6 @@ def create_tables_and_indexes(cursor):
             measurement_id VARCHAR(255) PRIMARY KEY,
             station_name VARCHAR(255) NOT NULL,
             measurement_timestamp TIMESTAMP NOT NULL,
-            date DATE NOT NULL,
-            time TIME NOT NULL,
             air_temperature FLOAT,
             wet_bulb_temperature FLOAT,
             humidity FLOAT,
@@ -45,7 +60,7 @@ def create_tables_and_indexes(cursor):
                                             ON preprocessed_data (station_name);"""
         
         CREATE_INDEX_PROC_DATA_TIME = """CREATE INDEX IF NOT EXISTS idx_preprocessed_timestamp 
-                                    ON preprocessed_data (date, time);"""
+                                    ON preprocessed_data (measurement_timestamp);"""
         
         CREATE_AGG_DATA_TABLE = """
         CREATE TABLE IF NOT EXISTS aggregated_data (
@@ -55,7 +70,58 @@ def create_tables_and_indexes(cursor):
             air_temperature_max FLOAT,
             air_temperature_mean FLOAT,
             air_temperature_std FLOAT,
-            -- (similar fields omitted for brevity)
+            wet_bulb_temperature_min FLOAT, 
+            wet_bulb_temperature_max FLOAT, 
+            wet_bulb_temperature_mean FLOAT, 
+            wet_bulb_temperature_std FLOAT,
+            humidity_min FLOAT, 
+            humidity_max FLOAT, 
+            humidity_mean FLOAT, 
+            humidity_std FLOAT, 
+            rain_intensity_min FLOAT, 
+            rain_intensity_max FLOAT, 
+            rain_intensity_mean FLOAT, 
+            rain_intensity_std FLOAT, 
+            interval_rain_min FLOAT, 
+            interval_rain_max FLOAT, 
+            interval_rain_mean FLOAT, 
+            interval_rain_std FLOAT,
+            total_rain_min FLOAT, 
+            total_rain_max FLOAT, 
+            total_rain_mean FLOAT, 
+            total_rain_std FLOAT,
+            precipitation_type_min FLOAT, 
+            precipitation_type_max FLOAT, 
+            precipitation_type_mean FLOAT, 
+            precipitation_type_std FLOAT,
+            wind_direction_min FLOAT, 
+            wind_direction_max FLOAT, 
+            wind_direction_mean FLOAT, 
+            wind_direction_std FLOAT,
+            wind_speed_min FLOAT, 
+            wind_speed_max FLOAT, 
+            wind_speed_mean FLOAT, 
+            wind_speed_std FLOAT,
+            max_wind_speed_min FLOAT, 
+            max_wind_speed_max FLOAT, 
+            max_wind_speed_mean FLOAT, 
+            max_wind_speed_std FLOAT,
+            barometric_pressure_min FLOAT, 
+            barometric_pressure_max FLOAT, 
+            barometric_pressure_mean FLOAT, 
+            barometric_pressure_std FLOAT,
+            solar_radiation_min FLOAT, 
+            solar_radiation_max FLOAT, 
+            solar_radiation_mean FLOAT, 
+            solar_radiation_std FLOAT,
+            heading_min FLOAT, 
+            heading_max FLOAT, 
+            heading_mean FLOAT, 
+            heading_std FLOAT,
+            battery_life_min FLOAT, 
+            battery_life_max FLOAT, 
+            battery_life_mean FLOAT, 
+            battery_life_std FLOAT,
             PRIMARY KEY (station_name, file_name)
         );"""
         
@@ -76,22 +142,7 @@ def create_tables_and_indexes(cursor):
     except Exception as error:
         logger.error(f"Error creating tables and indexes: {error}")
 
-def connect_to_postgresql():
-    try:
-        conn = psycopg2.connect(
-                dbname='SeaBreeze',
-                user='SeaBreeze',
-                password='SeaBreeze',
-                host='localhost',
-                port=5432
-            )
-        cursor = conn.cursor()
-        logger.info("Connected to PostgreSQL database.")
-        return conn, cursor
-    
-    except Exception as error:
-        logger.error(f"Failed to connect to the database. Error: {error}")
-        return None, None
+
 
 def insert_processed_data(cursor, conn, data):
     """
@@ -101,17 +152,15 @@ def insert_processed_data(cursor, conn, data):
         for _, row in data.iterrows():
             insert_script = """INSERT INTO preprocessed_data (
                             measurement_id, station_name, measurement_timestamp,
-                            date, time, 
                             air_temperature, wet_bulb_temperature , humidity,
                             rain_intensity ,interval_rain ,total_rain ,
                             precipitation_type ,wind_direction ,wind_speed ,
                             max_wind_speed ,barometric_pressure ,solar_radiation ,
                             heading , battery_life ) 
-                            VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s,%s, %s, %s, %s, %s)
+                            VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s,%s, %s, %s, %s, %s)
                             ON CONFLICT (measurement_id) DO NOTHING;"""
             
             insert_values = (row['Measurement ID'], row['Station Name'], row['Measurement Timestamp'], 
-                             row['date'], row['time'],
                              row['Air Temperature'], row['Wet Bulb Temperature'], row['Humidity'],
                              row['Rain Intensity'], row['Interval Rain'], row['Total Rain'],
                              row['Precipitation Type'], row['Wind Direction'], row['Wind Speed'],
@@ -211,11 +260,12 @@ def send_data_postgresql(preprocessed_data, agg_data):
         
         insert_processed_data(cursor, conn, preprocessed_data)
         insert_aggregated_data(cursor, conn, agg_data)
+        
     except Exception as error:
         logger.error(f"Fatal error in main workflow: {error}")
+        
     finally:
         if cursor:
             cursor.close()
         if conn:
             conn.close()
-        print("Database connection closed.")

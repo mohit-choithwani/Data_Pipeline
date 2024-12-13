@@ -1,4 +1,7 @@
-Station Name,Measurement Timestamp,Air Temperature,Wet Bulb Temperature,Humidity,Rain Intensity,Interval Rain,Total Rain,Precipitation Type,Wind Direction,Wind Speed,Maximum Wind Speed,Barometric Pressure,Solar Radiation,Heading,Battery Life,Measurement Timestamp Label,Measurement ID
-63rd Street Weather Station,09/27/2018 10:00:00 AM,16.4,12.2,61,0,0,260.3,0,231,2.5,4.7,996.3,484,356,11.9,09/27/2018 10:00 AM,63rdStreetWeatherStation201809271000
-63rd Street Weather Station,09/27/2018 11:00:00 AM,17.1,11.5,51,0,0,260.3,0,244,3.6,5.7,995.4,468,356,11.9,09/27/2018 11:00 AM,63rdStreetWeatherStation201809271100
-63rd Street Weather Station,09/27/2018 01:00:00 PM,18.2,12.4,51,0,0,260.3,0,248,3.1,5.3,994.8,377,355,11.9,09/27/2018 1:00 PM,63rdStreetWeatherStation201809271300
+Station Name,Measurement Timestamp,Air Temperature,Wet Bulb Temperature,Humidity,Rain Intensity,Interval Rain,Precipitation Type,Wind Direction,Wind Speed,Maximum Wind Speed,Barometric Pressure,Solar Radiation,Heading,Battery Life,Measurement Timestamp Label,Measurement ID
+63rd Street Weather Station,09/27/2018 10:00:00 AM,16.4,12.2,61,0,0,0,231,2.5,4.7,996.3,484,356,11.9,09/27/2018 10:00 AM,63rdStreetWeatherStation201809271900
+63rd Street Weather Station,09/27/2018 11:00:00 AM,17.1,11.5,51,0,0,75,244,3.6,5.7,995.4,468,356,11.9,09/27/2018 11:00 AM,63rdStreetWeatherStation201809271100
+63rd Street Weather Station,09/27/2018 01:00:00 PM,18.2,12.4,,0,0,0,248,3.1,5.3,994.8,377,355,11.9,09/27/2018 1:00 PM,63rdStreetWeatherStation201809271300
+63rd Street Weather Station,09/29/2018 03:00:00 AM,250,6.7,73,0,0,0,285,1.6,3.4,1004,3,355,11.9,09/29/2018 3:00 AM,63rdStreetWeatherStation201809290300
+Foster Weather Station,09/29/2018 03:00:00 AM,7.67,,70,,0,,293,1.5,2.1,1003.4,0,,15.2,09/29/2018 3:00 AM,FosterWeatherStation201809290300
+Oak Street Weather Station,07/31/2019 02:00:00 PM,21,16.5,63,0,0,0,79,3.3,4.7,1001.5,820,320,11.9,07/31/2019 2:00 PM,OakStreetWeatherStation201907311400
