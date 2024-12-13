@@ -18,7 +18,7 @@ def create_logger(name="SeaBreezeLogger"):
         # File for INFO and DEBUG logs
         info_log_file = os.path.join(LOG_DIR, "info.log")
         info_handler = logging.FileHandler(info_log_file)
-        info_handler.setLevel(logging.DEBUG)  
+        info_handler.setLevel(logging.INFO)  
         info_format = logging.Formatter('%(asctime)s - %(levelname)s - %(filename)s - %(message)s')
         info_handler.setFormatter(info_format)
 
