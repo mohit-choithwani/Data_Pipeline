@@ -2,22 +2,27 @@ import psycopg2
 from psycopg2 import sql, errors
 from logger import create_logger
 import os
+from dotenv import load_dotenv
 from time import sleep
 
 # Configure logging
 LOG_DIR = "logs"
 os.makedirs(LOG_DIR, exist_ok=True)
 
+# Initialized the logger
 logger = create_logger()
+
+# Load the .env file
+load_dotenv()
 
 def connect_to_postgresql():
     try:
         conn = psycopg2.connect(
-                dbname='SeaBreeze',
-                user='SeaBreeze',
-                password='SeaBreeze',
-                host='localhost',
-                port=5432
+                dbname = os.getenv("DB_NAME"),
+                user = os.getenv("DB_USER"),
+                password = os.getenv("DB_PASSWORD"),
+                host ='localhost',
+                port = os.getenv("DB_PORT")
             )
         cursor = conn.cursor()
         logger.info("Connected to PostgreSQL database.")
@@ -30,8 +35,6 @@ def connect_to_postgresql():
 def create_tables_and_indexes(cursor):
     """
     Creates tables and indexes in the database.
-    Args:
-        cursor: Database cursor object.
     """
     try:
         CREATE_DATA_TABLE_SQL = """
